@@ -6,8 +6,8 @@ public class factorial{
         }
         return ans;
     }
-    public static void main(String[] args){
-        int n=0;
+    public static void main(String[] args) {
+        int n=5;
         int result=fact(n);
         System.out.println("The factorial of " +n+ " is: " +result);
     }
