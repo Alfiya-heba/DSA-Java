@@ -1,4 +1,4 @@
-public class selectionSort {
+public class selectionSort{
     private static void selectionsort(int arr[],int n){
         for(int i=0;i<n-1;i++){
             int mini=i;
@@ -11,19 +11,21 @@ public class selectionSort {
             arr[mini]=arr[i];
             arr[i]=temp;
         }
-        System.out.println("After Selection Sort:");
+        System.out.println("Array after Selection sort is:");
         for(int i=0;i<n;i++){
-            System.out.println(arr[i]+" ");
+            System.out.print(arr[i]+" ");
         }
+        System.out.println();
     }
     public static void main(String[] args) {
-        int arr[]={44,67,12,37,76,69,1};
-        int n=7;
-        System.out.println("Array before Sorting");
+        int arr[]={2,12,43,99,69,1,56,62};
+        int n=arr.length;
+        System.out.println("Array before sorting is:");
         for(int i=0;i<n;i++){
-            System.out.println(arr[i]+" ");
-            selectionsort(arr, n);
+            System.out.print(arr[i]+" ");
         }
+        System.out.println();
+        selectionsort(arr, n);
     }
     
 }
