@@ -31,6 +31,7 @@ public class arrayToDLL{
         }
         System.out.println();
     }
+    
     public static void main(String[] args) {
         int arr[]={1,2,3,4,5};
         Node head=array2DLL(arr);
