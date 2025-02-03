@@ -70,6 +70,7 @@ public class deleteDLL {
     }
     return head;
   }
+ 
   private static void print(Node head){
     while(head!=null){
         System.out.print(head.data +" ");
@@ -89,6 +90,7 @@ public class deleteDLL {
       //head=deleteHead(head);
      //head=deleteTail(head);
      deleteK(head, 2);
+     
       print(head);
   }
 }
