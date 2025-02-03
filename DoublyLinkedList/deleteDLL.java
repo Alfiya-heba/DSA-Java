@@ -39,6 +39,37 @@ public class deleteDLL {
     temp.next=null;
     return head;
   }
+  private static Node deleteK(Node head,int k){
+    Node temp=head;
+    int cnt=0;
+    while(temp!=null){
+      cnt++;
+      if(cnt==k){
+        break;
+      }
+      temp=temp.next;
+    }
+    Node previous=temp.prev;
+    Node front=temp.next;
+    if(previous==null && front==null){
+      return null;
+    }
+    else if(previous==null){
+      deleteHead(head);
+      return head;
+    }
+    else if(front==null){
+      deleteTail(head);
+      return head;
+    }
+    else{
+      previous.next=front;
+      front.prev=previous;
+      temp.next=null;
+      temp.prev=null;
+    }
+    return head;
+  }
   private static void print(Node head){
     while(head!=null){
         System.out.print(head.data +" ");
@@ -56,7 +87,8 @@ public class deleteDLL {
         head.next.next.next = new Node(arr[3]);
         head.next.next.next.prev = head.next.next;
       //head=deleteHead(head);
-     head=deleteTail(head);
+     //head=deleteTail(head);
+     deleteK(head, 2);
       print(head);
   }
 }
